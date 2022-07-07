@@ -6,6 +6,7 @@ bool Swap01(T& A, T& B) {//others
 		T X = A;
 		A = B;
 		B = X;
+		X = T();
 	}
 	return true;
 }
@@ -19,6 +20,8 @@ bool Swap02(T& A, T& B) {//mine
 		A = Y;
 		B = X;
 	}
+	X = T();
+	Y = T();
 
 	return true;
 }
@@ -36,8 +39,8 @@ bool Swap03(T& A, T& B) {//sonu-
 
 int main() {
 
-	int A = 0xfffffff;
-	int B = A;
+	int A = 0xff;
+	int B = 0xff00;
 
 	Swap01(A, B);
 	std::cout << A << ',' << B << std::endl;
